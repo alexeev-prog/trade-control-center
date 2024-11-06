@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ЦКТ {{title}}</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/root.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/content.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" rel="stylesheet" />
+</head>
+<body>
+	<div class="aside-container">
+		<aside class='aside'>
+			<div class="aside__top">
+				<div class="aside__top-logo">
+					<img src="{{ url_for('static', filename='img/logo.png') }}" alt="">
+					<h2 class='text-muted'>Open <span class='accented'>TCC</span></h2>
+					<button onclick='document.body.classList.toggle("dark");'>dark</button>
+				</div>
+				<div class="aside__top-close" id="close-btn">
+					<span class="material-symbols-sharp">close</span>
+				</div>
+			</div>
+
+			<div class="sidebar">
+				<a href="#" class='active'>
+					<span class="material-symbols-sharp">grid_view</span>
+					<h3>Дашборд</h3>
+				</a>
+				<a href="#">
+					<span class="material-symbols-sharp">receipt_long</span>
+					<h3>Заказы</h3>
+				</a>
+				<a href="#">
+					<span class="material-symbols-sharp">insights</span>
+					<h3>Аналитика</h3>
+				</a>
+				<a href="#">
+					<span class="material-symbols-sharp">inventory</span>
+					<h3>Товары</h3>
+				</a>
+				<a href="#">
+					<span class="material-symbols-sharp">work</span>
+					<h3>Работа</h3>
+				</a>
+				<a href="#">
+					<span class="material-symbols-sharp">mail_outline</span>
+					<h3>Сообщения</h3>
+					<span class="messages-count">1</span>
+				</a>
+				<a href="#">
+					<span class="material-symbols-sharp">settings</span>
+					<h3>Настройки</h3>
+				</a>
+				<a href="#">
+					<span class="material-symbols-sharp">add</span>
+					<h3>Новый товар</h3>
+				</a>
+				<a href="#">
+					<span class="material-symbols-sharp">logout</span>
+					<h3>Выйти</h3>
+				</a>
+			</div>
+		</aside>
+
+		{% block content %}
+		{% endblock %}
+	</div>
+</body>
+</html>

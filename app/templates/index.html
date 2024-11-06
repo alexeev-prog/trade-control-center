@@ -1,0 +1,219 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main>
+	<h1>Дашборд</h1>
+	<p>Здесь собрана основная информация о продажах и товарообороте.</p>
+
+	<div class="date">
+		<input type="date" class='dashboard-date-input'>
+	</div>
+
+	<div class="insights">
+		<div class="sales">
+			<span class="material-symbols-sharp">analytics</span>
+
+			<div class="middle">
+				<div class="left">
+					<h3>Всего продаж</h3>
+					<h1>25.000руб</h1>
+				</div>
+				<div class="progress">
+					<svg>
+						<circle cx='38' cy='38' r='36'></circle>
+					</svg>
+					<div class="number">
+						<p>81%</p>
+					</div>
+				</div>
+			</div>
+			<small class="text-muted">За последние 24 часа</small>
+		</div>
+
+		<div class="expenses">
+			<span class="material-symbols-sharp">bar_chart</span>
+
+			<div class="middle">
+				<div class="left">
+					<h3>Всего расходов</h3>
+					<h1>15.000руб</h1>
+				</div>
+				<div class="progress">
+					<svg>
+						<circle cx='38' cy='38' r='36'></circle>
+					</svg>
+					<div class="number">
+						<p>60%</p>
+					</div>
+				</div>
+			</div>
+			<small class="text-muted">За последние 24 часа</small>
+		</div>
+
+		<div class="income">
+			<span class="material-symbols-sharp">stacked_line_chart</span>
+
+			<div class="middle">
+				<div class="left">
+					<h3>Чистая прибыль</h3>
+					<h1>10.000руб</h1>
+				</div>
+				<div class="progress">
+					<svg>
+						<circle cx='38' cy='38' r='36'></circle>
+					</svg>
+					<div class="number">
+						<p>40%</p>
+					</div>
+				</div>
+			</div>
+			<small class="text-muted">За последние 24 часа</small>
+		</div>
+	</div>
+
+	<div class="recent-orders">
+		<h2>Последние заказы</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>Название</th>
+					<th>ID</th>
+					<th>Цена</th>
+					<th>Статус</th>
+					<th>Описание</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Условный Товар</td>
+					<td>3</td>
+					<td>0.0руб</td>
+					<td class='warning'>Обрабатывается</td>
+					<td class="primary">Заказ от сегодня</td>
+				</tr>
+				<tr>
+					<td>Условный Товар 2</td>
+					<td>2</td>
+					<td>0.0руб</td>
+					<td class='success'>Оформлен</td>
+					<td class="primary">Заказ от сегодня</td>
+				</tr>
+				<tr>
+					<td>Условный Товар 3</td>
+					<td>1</td>
+					<td>0.0руб</td>
+					<td class='danger'>Отменен</td>
+					<td class="primary">Заказ от 03.03.2024</td>
+				</tr>
+			</tbody>
+		</table>
+		<a href="#">Показать все</a>
+	</div>
+</main>
+
+<div class="right">
+	<div class="top">
+		<button id="menu-btn">
+			<span class="material-symbols-sharp">menu</span>
+		</button>
+		<div class="theme-toggler">
+			<span class="material-symbols-sharp active">light_mode</span>
+			<span class="material-symbols-sharp">dark_mode</span>
+		</div>
+		<div class="profile">
+			<div class="info">
+				<p><b>OpenTCC</b></p>
+				<small class="text-muted">Админ</small>
+			</div>
+			<div class="profile-photo">
+				<img src="{{ url_for('static', filename='img/logo.png') }}" alt="">
+			</div>
+		</div>
+	</div>
+
+	<div class="recent-updates">
+		<h2>Recent Updates</h2>
+		<div class="updates">
+			<div class="update">
+				<div class="profile-photo">
+					<img src="{{ url_for('static', filename='img/logo.png') }}" alt="">
+				</div>
+				<div class="message">
+					<p><b>Добавлен</b> новый товар</p>
+					<p class='text-muted'>Новый товар на складе: Условный товар 4</p>
+					<small class="text-muted">Только что</small>
+				</div>
+			</div>
+			<div class="update">
+				<div class="profile-photo">
+					<img src="{{ url_for('static', filename='img/logo.png') }}" alt="">
+				</div>
+				<div class="message">
+					<p><b>Не хватает</b> товара на складе</p>
+					<p class='text-muted'>Товара "Условный товар 1" критически мало</p>
+					<small class="text-muted">Недавно</small>
+				</div>
+			</div>
+			<div class="update">
+				<div class="profile-photo">
+					<img src="{{ url_for('static', filename='img/logo.png') }}" alt="">
+				</div>
+				<div class="message">
+					<p><b>Расходы</b> уменьшились</p>
+					<p class='text-muted'>Вы уменьшили траты на аренду</p>
+					<small class="text-muted">Недавно</small>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="sales-analytics">
+		<h2>Продажи</h2>
+		<div class="item online">
+			<div class="icon">
+				<span class="material-symbols-sharp active">local_mall</span>
+			</div>
+			<div class="right">
+				<div class="right">
+					<div class="info">
+						<h3>Продажи</h3>
+						<small class="text-muted">За последние 24 часа</small>
+					</div>
+					<h5 class="success">+39%</h5>
+					<h3>3849</h3>
+				</div>
+			</div>
+		</div>
+		<div class="item wholesale">
+			<div class="icon">
+				<span class="material-symbols-sharp active">shopping_cart</span>
+			</div>
+			<div class="right">
+				<div class="right">
+					<div class="info">
+						<h3>Оптовые продажи</h3>
+						<small class="text-muted">За последние 24 часа</small>
+					</div>
+					<h5 class="success">+159%</h5>
+					<h3>11203</h3>
+				</div>
+			</div>
+		</div>
+		<div class="item retail">
+			<div class="icon">
+				<span class="material-symbols-sharp active"></span>
+			</div>
+			<div class="right">
+				<div class="right">
+					<div class="info">
+						<h3>Розница</h3>
+						<small class="text-muted">За последние 24 часа</small>
+					</div>
+					<h5 class="danger">-10%</h5>
+					<h3>24003</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

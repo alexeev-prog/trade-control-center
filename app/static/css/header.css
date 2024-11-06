@@ -1,0 +1,124 @@
+.profile-photo {
+	width: 2.8rem;
+	height: 2.8rem;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.aside-container {
+	display: grid;
+	width: 96%;
+	margin: 0 auto;
+/*	background: ;*/
+	gap: 1.8rem;
+	grid-template-columns: 14rem auto 23rem;
+}
+
+.aside {
+	height: 100vh;
+}
+
+.aside .aside__top {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 1.4rem;
+}
+
+.aside .aside__top-logo {
+	display: flex;
+	gap: 0.8rem;
+}
+
+.aside .aside__top-logo img {
+	width: 3rem;
+	height: 3rem;
+}
+
+.aside .aside__top-close {
+	display: none;
+}
+
+.aside .sidebar {
+	display: flex;
+	flex-direction: column;
+	height: 86vh;
+	position: relative;
+	top: 3rem;
+}
+
+.aside .sidebar h3 {
+	font-size: 1rem;
+	font-family: "Montserrat", sans-serif;
+}
+
+.aside .sidebar a {
+	display: flex;
+	color: var(--lightgray);
+	margin-left: 2rem;
+	gap: 1rem;
+	align-items: center;
+	position: relative;
+	height: 3.7rem;
+	transition: all 300ms ease;
+}
+
+.aside .sidebar a h3 {
+	color: var(--lightgray);
+}
+
+.aside .sidebar a span {
+	font-size: 1.4rem;
+	transition: all 300ms ease;
+}
+
+.aside .sidebar a:last-child {
+	position: absolute;
+	bottom: 2rem;
+	width: 100%;
+}
+
+.aside .sidebar a.active {
+	border-radius: 5px;
+	background: var(--second-bg-color);
+	color: var(--color-primary);
+	margin-left: 0;
+}
+
+.aside .sidebar a.active h3 {
+	background: var(--second-bg-color);
+	color: var(--color-primary);
+}
+
+.aside .sidebar a.active:before {
+	content: '';
+	border-radius: 5px;
+	width: 6px;
+	height: 100%;
+	background: var(--color-primary);
+}
+
+.aside .sidebar a.active span {
+	color: var(--color-primary);
+	margin-left: calc(1rem - 3px);
+}
+
+.aside .sidebar a:hover {
+	color: var(--color-primary);
+}
+
+.aside .sidebar a:hover h3 {
+	color: var(--color-primary);
+}
+
+.aside .sidebar a:hover span {
+	margin-left: 1rem;
+}
+
+.aside .sidebar .messages-count {
+	background: var(--color-danger);
+	color: white;
+	padding: 2px 10px;
+	font-size: 11px;
+	border-radius: var(--border-radius-1);
+}
