@@ -174,8 +174,6 @@ body {
 	color: var(--color-warning);
 }
 
-.aside {}
-
 img {
 	display: block;
 	width: 100%;
@@ -237,6 +235,14 @@ small {
 	margin-top: 10px;
 	padding-top: 10px;
 	padding-bottom: 10px;
+}
+
+.aside-container {
+	display: grid;
+	width: 96%;
+	margin: 0 auto;
+	gap: 1.8rem;
+	grid-template-columns: 14rem auto 23rem;
 }
 
 .container {
